@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:style": "stylelint \"**/*.{css,scss,module.css,module.scss}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format:all": "pnpm format:check && pnpm format && pnpm lint && pnpm lint:style"
   },
   "dependencies": {
     "next": "14.2.5",
