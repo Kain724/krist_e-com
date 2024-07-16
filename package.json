@@ -9,27 +9,29 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint:style": "stylelint \"**/*.{css,scss,module.css,module.scss}\""
+    "lint:style": "stylelint \"**/*.{css,scss,module.css,module.scss}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.67",
+    "@types/react-dom": "18.2.22",
+    "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8.4.39",
-    "postcss-scss": "^4.0.9",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "stylelint": "^16.7.0",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-config-standard-scss": "^13.1.0",
-    "stylelint-config-tailwindcss": "^0.0.7",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "husky": "^9.0.11",
+    "postcss": "8.4.39",
+    "postcss-scss": "4.0.9",
+    "prettier-plugin-tailwindcss": "0.6.5",
+    "stylelint": "16.7.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-config-tailwindcss": "0.0.7",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.4.2"
   }
 }
