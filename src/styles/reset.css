@@ -56,8 +56,8 @@ a {
 }
 
 /* Only reset list styles when role="list" is present */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
   padding: 0;
   margin: 0;

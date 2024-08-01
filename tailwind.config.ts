@@ -7,13 +7,30 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx,css,scss}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    colors: {
+      'pri-bg-light': '#ffffff',
+      'sec-bg-light': '#fc8019',
+      'ter-bg-light': '#808080',
+
+      'pri-text-light': '#ffffff',
+
+      'pri-dark': '#000000',
+      'pri-bg-dark': '#000000',
+      // 'sec-bg-dark': '#fc8019',
+      // 'ter-bg-dark': '#808080',
     },
   },
   plugins: [],
 }
 export default config
+
+// Primary
+// Secondary
+// Tertiary
+// Quaternary
+// Quinary
+// Senary
+// Septenary
+// Octonary
+// Novenary
+// Denary

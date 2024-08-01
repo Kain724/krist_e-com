@@ -3,7 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+// /* Light Theme Colors */
+// $color-bg-light: #ffffff;
+// $color-text-light: #000000;
+// $color-text-prim-light: #000000;
+// $color-prim-light: #fc8019;
+
+// /* Dark Theme Colors */
+// $color-bg-dark: #000000;
+// $color-text-dark: #ffffff;
+// $color-prim-dark: #3b82f6;
+
+// TODO:tooltip
+
 body {
-  //   color: #ffff;
-  background-color: black;
+  background-color: rgb(128 128 128);
 }

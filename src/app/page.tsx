@@ -1,13 +1,11 @@
-import { Package } from 'lucide-react'
-import s from './page.module.scss'
+import s from './styles.module.scss'
 
-
-export default function Home() {
+const Home = () => {
   return (
-    <main className='container mx-auto px-4 '>
-      <div className='w-10 h-10 bg-cyan-300'>
-        <Package/>
-      </div>
+    <main className={s.main_container}>
+      <div className='bg-cyan-300 h-10 w-10'></div>
     </main>
   )
 }
+
+export default Home

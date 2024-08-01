@@ -1,0 +1,56 @@
+.footer {
+  @apply bg-sec-bg-light;
+
+  .footer_container {
+    @apply container mx-auto flex min-h-72 flex-col items-center justify-between;
+    @apply sm:flex-row sm:items-center;
+
+    .logo {
+      @apply mt-4 flex;
+      @apply sm:mt-0 sm:w-[25%];
+
+      h2 {
+        @apply text-4xl font-bold text-pri-bg-light;
+      }
+
+      svg {
+        @apply mr-0 block min-h-12 min-w-12 text-pri-bg-light;
+      }
+    }
+
+    .info {
+      @apply flex w-[100%] flex-col pt-0;
+      @apply sm:w-[50%] sm:pt-6;
+
+      div:first-child {
+        @apply flex flex-col items-center justify-evenly;
+        @apply sm:flex-row sm:items-start;
+
+        span {
+          @apply inline-block pb-2 text-pri-bg-light transition-colors duration-300 hover:text-pri-bg-dark;
+          @apply transition-transform duration-200 active:scale-90;
+
+          &:not(:last-child) {
+            @apply pb-2;
+          }
+        }
+      }
+
+      .social {
+        @apply flex h-7 justify-center space-x-4 pt-2;
+        @apply sm:pt-6;
+
+        svg {
+          @apply text-pri-bg-light transition-colors duration-300 hover:text-pri-bg-dark;
+          @apply transition-transform duration-200 active:scale-90;
+        }
+      }
+    }
+
+    .phone {
+      @apply mb-3 text-pri-bg-light transition-colors duration-300 hover:text-pri-bg-dark;
+      @apply transition-transform duration-200 active:scale-90;
+      @apply sm:mb-0;
+    }
+  }
+}

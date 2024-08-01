@@ -1,0 +1,59 @@
+.header {
+  .header_container {
+    @apply container mx-auto justify-between pt-6;
+    @apply flex-none;
+    @apply sm:flex;
+
+    div {
+      @apply mb-4 flex w-full items-center justify-center justify-items-start;
+      @apply sm:mb-0 sm:w-[20%] sm:justify-start;
+      @apply md:w-[30%];
+      @apply lg:w-4/5;
+
+      h1 {
+        @apply mr-0 text-4xl font-bold;
+        @apply sm:mr-2;
+      }
+
+      svg {
+        @apply mr-0 block min-h-12 min-w-12 text-sec-bg-light;
+        @apply sm:mr-2;
+      }
+    }
+
+    nav {
+      @apply flex w-full flex-wrap items-center justify-between;
+      @apply sm:flex sm:flex-row sm:flex-nowrap sm:justify-normal sm:space-x-6;
+
+      form {
+        @apply order-3 my-6 flex items-center justify-center;
+        @apply sm:order-1 sm:my-0;
+
+        @media (width >= 640px) and (width <= 764px) {
+          @apply justify-end;
+        }
+
+        input {
+          @apply w-[90%] overflow-hidden text-ellipsis whitespace-nowrap p-1 focus:border-sec-bg-light focus:outline-none;
+          @apply max-w-[90%] p-1 sm:w-full;
+
+          @media (width >= 640px) and (width <= 764px) {
+            @apply w-3/4;
+          }
+        }
+      }
+
+      svg {
+        @apply order-1 ml-5 mr-[5%] block h-12 min-h-6 w-12 min-w-6;
+        @apply sm:order-2;
+        @apply transition-colors duration-300 hover:text-sec-bg-light;
+        @apply transition-transform duration-200 active:scale-90;
+      }
+
+      button {
+        @apply order-2 mx-[5%];
+        @apply sm:order-2;
+      }
+    }
+  }
+}

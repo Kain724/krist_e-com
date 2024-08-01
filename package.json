@@ -10,6 +10,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:style": "stylelint \"**/*.{css,scss,module.css,module.scss}\"",
+    "fix:style": "stylelint --fix '**/*.{css,scss,module.css,module.scss}'",
     "prepare": "husky",
     "format:all": "pnpm format:check && pnpm format && pnpm lint && pnpm lint:style"
   },
@@ -22,6 +23,7 @@
     "sass": "^1.77.8"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "20.11.30",
     "@types/react": "18.2.67",
     "@types/react-dom": "18.2.22",

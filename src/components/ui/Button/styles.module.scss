@@ -1,0 +1,10 @@
+.btn {
+  @apply rounded-lg px-6 py-2;
+  @apply text-nowrap text-xs sm:text-base md:text-lg;
+  @apply transition-transform duration-700 active:scale-90;
+}
+
+.pri {
+  @apply bg-pri-bg-dark text-pri-text-light;
+  @apply transition-colors duration-300 hover:bg-sec-bg-light;
+}
