@@ -19,3 +19,7 @@
 body {
   background-color: rgb(128 128 128);
 }
+
+input {
+  @apply focus:outline-none;
+}

@@ -7,6 +7,8 @@ import InstagramIcon from '/public/icons/instagram.svg'
 import s from './styles.module.scss'
 import Link from 'next/link'
 
+// TODO::ADD to li tag a
+
 const Footer = () => {
   return (
     <footer className={s.footer}>
@@ -16,12 +18,12 @@ const Footer = () => {
           <Croissant />
         </div>
         <div className={s.info}>
-          <div>
-            <span>About us</span>
-            <span>Delivery</span>
-            <span>Help & Support</span>
-            <span>T&C</span>
-          </div>
+          <ul>
+            <li>About us</li>
+            <li>Delivery</li>
+            <li>Help & Support</li>
+            <li>T&C</li>
+          </ul>
           <div className={s.social}>
             <Link href={'https://www.facebook.com/'}>
               <FacebookIcon

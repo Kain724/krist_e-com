@@ -34,7 +34,7 @@
         }
 
         input {
-          @apply w-[90%] overflow-hidden text-ellipsis whitespace-nowrap p-1 focus:border-sec-bg-light focus:outline-none;
+          @apply w-[90%] overflow-hidden text-ellipsis whitespace-nowrap p-1 focus:border-sec-bg-light;
           @apply max-w-[90%] p-1 sm:w-full;
 
           @media (width >= 640px) and (width <= 764px) {

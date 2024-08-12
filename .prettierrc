@@ -21,9 +21,9 @@
   "plugins": ["prettier-plugin-tailwindcss"],
   "overrides": [
     {
-      "files": "*.css",
+      "files": ["*.css", "*.scss", "*.module.scss"],
       "options": {
-        "singleQuote": false,
+        "singleQuote": true,
         "printWidth": 80
       }
     }
