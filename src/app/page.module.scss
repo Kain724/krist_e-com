@@ -7,7 +7,9 @@
       @apply sm:w-[60%];
       @apply lg:w-[45%];
       @apply 2xl:w-[50%];
+
       height: 650px;
+
       h2 {
         @apply mb-5 h-fit w-fit flex-nowrap justify-center text-3xl leading-10;
         @apply sm:h-fit sm:text-5xl sm:leading-10;
@@ -30,18 +32,21 @@
         .wrap_apple {
           background-color: #ffd0d0;
           border-radius: 40px;
+
           @apply mr-2 mt-5 inline-flex h-14 w-20 justify-center align-middle;
           @apply sm:h-16 sm:w-28;
         }
         .wrap_banana {
           background-color: #fec08c;
           border-radius: 40px;
+
           @apply mx-4 mt-5 inline-flex h-14 w-20 translate-y-5;
           @apply sm:h-16 sm:w-28;
         }
-        span:last-child {
-          @apply translate-y-5;
-        }
+
+        // span:last-child {
+        //   @apply translate-y-5;
+        // }
       }
       p {
         @apply mb-5 h-fit w-fit;
@@ -57,10 +62,6 @@
             @apply h-[110%] w-full min-w-52 max-w-[80%];
             @apply overflow-hidden text-ellipsis whitespace-nowrap p-1 focus:border-sec-bg-light;
             @apply sm:h-[75%];
-            // @apply 2xl:w-[90%];
-            // @apply lg:w-[85%];
-            // @apply md:w-[80%];
-            // @apply max-w-[85%];
           }
         }
         button {
@@ -77,6 +78,7 @@
       @apply sm:flex sm:items-center;
       svg:nth-child(1) {
         @apply absolute;
+
         left: calc((70% + 170px));
         top: calc(25%);
         width: 600px;
@@ -84,6 +86,7 @@
       }
       svg:nth-child(2) {
         @apply absolute;
+
         left: calc((42% + 170px));
         top: calc(17%);
         width: 600px;

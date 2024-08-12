@@ -12,7 +12,7 @@
     "lint:style": "stylelint \"**/*.{css,scss,module.css,module.scss}\"",
     "fix:style": "stylelint --fix '**/*.{css,scss,module.css,module.scss}'",
     "prepare": "husky",
-    "format:all": "pnpm format:check && pnpm format && pnpm lint && pnpm lint:style"
+    "format:all": "pnpm pnpm format && pnpm lint && pnpm lint:style"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.51.23",
