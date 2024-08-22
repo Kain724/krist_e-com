@@ -6,11 +6,20 @@ import Banana from '/public/banana.svg'
 import Apple from '/public/apple.svg'
 
 import s from './page.module.scss'
-import SearchBar from '@/components/ui/SearchBar'
+import SimpleSearchBar from '@/components/ui/SearchBar/SimpleSearchBar'
+import DropdownSearchBar from '@/components/ui/SearchBar/DropdownSearchBar'
 import Button from '@/components/ui/Button'
+import { useState } from 'react'
+import { useSearch } from '@/hooks/useSeach'
 
 const Home = () => {
   const { width } = useWindowSize()
+  const [isDropdownNeeded, setIsDropdownNeeded] = useState(true)
+  //   const [isDropdownNeeded, setIsDropdownNeeded] = useState(false)
+  const { query, selectedOption, setQuery, setSelectedOption, handleSearch } = useSearch()
+
+  const dropdownOptions = ['London', 'Paris', 'Berlin', 'Budapest', 'Rome']
+
   const contentBigScreen = (
     <section className={s.main}>
       <div className={s.info}>
@@ -27,13 +36,21 @@ const Home = () => {
           </span>
           <span className={s.text_color}>& Daily Life</span>
         </h2>
-        <p>
+        <p>                     
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae placeat
           accusantium harum voluptatum saepe quam obcaecati quaerat? Repellat, voluptatibus. Maiores
-          ullam odit voluptate nostrum a quia voluptates, sit saepe.
+          ullam odit voluptate nostrum a quia voluptates, sit saepe. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Minima repudiandae placeat accusantium harum voluptatum
+          saepe quam obcaecati quaerat? Repellat, voluptatibus. Maiores ullam odit voluptate nostrum
+          a quia voluptates, sit saepe.
         </p>
         <div className={s.wrap_filter}>
-          <SearchBar />
+          <DropdownSearchBar
+            placeholder='Choose city in Europe'
+            options={dropdownOptions}
+            onClick={() => console.log}
+            onSelect={(option) => console.log(option)}
+          />
           <Button>Get Started</Button>
         </div>
         <div className={s.wrap_recommendation}>
@@ -73,7 +90,13 @@ const Home = () => {
           ullam odit voluptate nostrum a quia voluptates, sit saepe.
         </p>
         <div className={s.wrap_filter}>
-          <SearchBar />
+          <DropdownSearchBar
+            placeholder='Search...'
+            options={dropdownOptions}
+            onSelect={(option) => console.log(option)}
+            variantInput='searchInputInfo'
+            onClick={() => console.log}
+          />
           <Button>Get Started</Button>
         </div>
         <div className={s.wrap_recommendation}>

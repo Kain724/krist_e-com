@@ -3,46 +3,49 @@ import React, { useState } from 'react'
 import SearchBarBase from './SearchBarBase'
 import s from './styles.module.scss'
 
-interface DropdownSearchBarProps {
+interface IDropdownSearchBarProps {
   placeholder?: string
   options: string[]
+  onClick: (option: string) => void
+  variantInput?: 'searchInputHeader' | 'searchInputInfo'
   onSelect: (option: string) => void
 }
 
-const DropdownSearchBar = ({ placeholder = '', options, onSelect }: DropdownSearchBarProps) => {
+const DropdownSearchBar = ({
+  placeholder = '',
+  options,
+  onClick,
+  onSelect,
+}: IDropdownSearchBarProps) => {
   const [query, setQuery] = useState('')
-  const [showDropdown, setShowDropdown] = useState(false)
+  const [showDropdown, setShowDropdown] = useState(true)
 
   const handleSelect = (option: string) => {
     setQuery(option)
     setShowDropdown(false)
-    onSelect(option)
+    onClick(option)
   }
 
   return (
     <div className={s.dropdownContainer}>
-      <SearchBarBase
-        placeholder={placeholder}
-        value={query}
-        onChange={(value) => {
-          setQuery(value)
-          setShowDropdown(true)
-        }}
-      />
       {showDropdown && (
-        <ul className={s.dropdownList}>
+        <select className={s.dropdownList}>
           {options
             .filter((option) => option.toLowerCase().includes(query.toLowerCase()))
             .map((option, index) => (
-              <li
+              <option
                 key={index}
-                onClick={() => handleSelect(option)}
+                // onClick={() => handleSelect(option)}
                 className={s.dropdownItem}
+                onSelect={() => {
+                  handleSelect(option)
+                  onSelect
+                }}
               >
                 {option}
-              </li>
+              </option>
             ))}
-        </ul>
+        </select>
       )}
     </div>
   )

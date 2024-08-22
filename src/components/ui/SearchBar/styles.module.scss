@@ -1,3 +1,70 @@
-.a {
-  @apply flex w-0;
+.searchInput {
+  @apply overflow-hidden text-ellipsis whitespace-nowrap rounded border p-1 focus:border-sec-bg-light;
 }
+
+.searchForm {
+  @apply order-1 flex h-full w-full;
+  @apply mb-4 flex content-center items-center;
+  @apply sm:mb-0;
+}
+
+.searchFormHeader {
+  @apply order-3 my-6 flex h-full w-full items-center justify-center;
+  @apply sm:order-1 sm:my-0;
+
+  @media (width >= 640px) and (width <= 764px) {
+    @apply justify-end;
+  }
+
+  .searchInputHeader {
+    @apply w-[90%];
+    @apply max-w-[90%] p-1 sm:w-full;
+
+    @media (width >= 640px) and (width <= 764px) {
+      @apply w-3/4;
+    }
+  }
+}
+
+.searchFormInfo {
+  @apply order-3 my-6;
+  @apply sm:order-1 sm:my-0;
+
+  @media (width >= 640px) and (width <= 764px) {
+    @apply justify-start;
+  }
+
+  .searchInputInfo {
+    @apply w-[90%];
+    @apply max-w-[90%] p-1 sm:w-full;
+
+    @media (width >= 640px) and (width <= 764px) {
+      @apply w-3/4;
+    }
+  }
+
+}
+
+
+
+
+
+// .searchFormInfo {
+//   @apply order-3 my-6;
+//   @apply sm:order-1 sm:my-0;
+
+//   @media (width >= 640px) and (width <= 764px) {
+//     @apply justify-start;
+//   }
+
+//   .searchInputInfo {
+//     @apply w-[90%];
+//     @apply max-w-[90%] p-1 sm:w-full;
+
+//     @media (width >= 640px) and (width <= 764px) {
+//       @apply w-3/4;
+//     }
+//   }
+
+// }
+
