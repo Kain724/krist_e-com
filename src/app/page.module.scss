@@ -57,10 +57,8 @@
       }
 
       .wrap_select {
-        // @apply mb-5 flex flex-col-reverse content-between;
         @apply mb-5 flex flex-col-reverse justify-between;
         @apply sm:flex-row sm:content-center sm:items-center sm:justify-between;
-        // @apply sm:flex-row sm:content-between sm:items-center;
 
         button {
           @apply order-2 min-w-28 max-w-[10%];

@@ -36,7 +36,7 @@ const Home = () => {
           </span>
           <span className={s.text_color}>& Daily Life</span>
         </h2>
-        <p>                     
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repudiandae placeat
           accusantium harum voluptatum saepe quam obcaecati quaerat? Repellat, voluptatibus. Maiores
           ullam odit voluptate nostrum a quia voluptates, sit saepe. Lorem ipsum dolor sit amet
