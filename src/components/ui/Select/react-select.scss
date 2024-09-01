@@ -10,11 +10,11 @@
     height: 20px !important;
     border-color: black !important;
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       width: 95% !important;
     }
 
-    @media (min-width: 770px) {
+    @media (width >= 770px) {
       width: 50% !important;
     }
 
@@ -37,11 +37,11 @@
       padding: 0px !important;
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       width: 95% !important;
     }
 
-    @media (min-width: 770px) {
+    @media (width >= 770px) {
       width: 50% !important;
     }
   }

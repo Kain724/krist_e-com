@@ -61,7 +61,7 @@
         @apply sm:flex-row sm:content-center sm:items-center sm:justify-between;
 
         button {
-          @apply order-2 min-w-28 max-w-[10%] h-7;
+          @apply order-2 h-7 min-w-28 max-w-[10%];
           @apply sm:min-w-36;
         }
       }

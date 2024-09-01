@@ -16,4 +16,3 @@ const CardContainer = ({ restaurant, dish }: ICardContainerProps) => {
   )
 }
 export default CardContainer
- 
