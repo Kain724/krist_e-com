@@ -5,12 +5,12 @@
     @apply flex;
 
     .info {
-      @apply flex h-fit flex-col pr-2;
+      @apply mb-44 flex h-fit flex-col pr-2;
       @apply sm:w-[60%];
       @apply lg:w-[45%];
       @apply 2xl:w-[50%];
 
-      height: 650px;
+      //   height: 650px;
 
       h2 {
         @apply mb-5 h-fit w-fit flex-nowrap justify-center text-3xl leading-10;
@@ -61,13 +61,9 @@
         @apply sm:flex-row sm:content-center sm:items-center sm:justify-between;
 
         button {
-          @apply order-2 min-w-28 max-w-[10%];
+          @apply order-2 min-w-28 max-w-[10%] h-7;
           @apply sm:min-w-36;
         }
-      }
-
-      .wrap_recommendation {
-        @apply flex flex-col;
       }
     }
 

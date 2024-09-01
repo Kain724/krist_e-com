@@ -1,0 +1,73 @@
+.custom-select {
+  &__placeholder {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+
+  &__control {
+    height: 20px !important;
+    border-color: black !important;
+
+    @media (max-width: 768px) {
+      width: 95% !important;
+    }
+
+    @media (min-width: 770px) {
+      width: 50% !important;
+    }
+
+    &--is-focused {
+      border-color: #fc8019 !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &__menu {
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: white !important;
+    border-radius: 5px !important;
+    z-index: 1000;
+
+    > :first-child {
+      margin: 0px !important;
+      padding: 0px !important;
+    }
+
+    @media (max-width: 768px) {
+      width: 95% !important;
+    }
+
+    @media (min-width: 770px) {
+      width: 50% !important;
+    }
+  }
+
+  &__indicator-separator {
+    background-color: black !important;
+  }
+
+  &__dropdown-indicator {
+    color: black !important;
+
+    &:hover {
+      color: #fc8019 !important;
+    }
+  }
+
+  &__option {
+    margin: 0px !important;
+
+    &:hover {
+      background-color: #fc8019 !important;
+    }
+
+    &--is-selected {
+      background-color: black !important;
+      color: white;
+    }
+  }
+}

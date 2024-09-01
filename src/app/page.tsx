@@ -6,11 +6,10 @@ import Banana from '/public/banana.svg'
 import Apple from '/public/apple.svg'
 
 import s from './page.module.scss'
-import SimpleSearchBar from '@/components/ui/SearchBar/SimpleSearchBar'
-import DropdownSearchBar from '@/components/ui/SearchBar/DropdownSearchBar'
+import Select from '@/components/ui/Select/index'
 import Button from '@/components/ui/Button'
 import { useState } from 'react'
-import { useSearch } from '@/hooks/useSeach'
+import { useSearch } from '@/hooks/useSearch'
 
 const Home = () => {
   const { width } = useWindowSize()
@@ -44,24 +43,13 @@ const Home = () => {
           saepe quam obcaecati quaerat? Repellat, voluptatibus. Maiores ullam odit voluptate nostrum
           a quia voluptates, sit saepe.
         </p>
-        <div className={s.wrap_filter}>
-          <DropdownSearchBar
-            placeholder='Choose city in Europe'
+        <div className={s.select_box}>
+          <Select
             options={dropdownOptions}
-            onClick={() => console.log}
             onSelect={(option) => console.log(option)}
-          />
+            onClick={() => console.log}
+          />{' '}
           <Button>Get Started</Button>
-        </div>
-        <div className={s.wrap_recommendation}>
-          <h3>Popular cities in Europe</h3>
-          <ul>
-            <li>London</li>
-            <li>Paris</li>
-            <li>Berlin</li>
-            <li>Budapest</li>
-            <li>Rome</li>
-          </ul>
         </div>
       </div>
       <div className={s.showcase}>
@@ -89,25 +77,13 @@ const Home = () => {
           accusantium harum voluptatum saepe quam obcaecati quaerat? Repellat, voluptatibus. Maiores
           ullam odit voluptate nostrum a quia voluptates, sit saepe.
         </p>
-        <div className={s.wrap_filter}>
-          <DropdownSearchBar
-            placeholder='Search...'
+        <div className={s.select_box}>
+          <Select
             options={dropdownOptions}
             onSelect={(option) => console.log(option)}
-            variantInput='searchInputInfo'
             onClick={() => console.log}
           />
           <Button>Get Started</Button>
-        </div>
-        <div className={s.wrap_recommendation}>
-          <h3>Popular cities in Europe</h3>
-          <ul>
-            <li>London</li>
-            <li>Paris</li>
-            <li>Berlin</li>
-            <li>Budapest</li>
-            <li>Rome</li>
-          </ul>
         </div>
       </div>
     </section>
