@@ -1,20 +1,24 @@
 'use client'
-import { useWindowSize } from 'react-use'
-import SoupImg from '/public/foodMain2.svg'
-import FourPlatesImg from '/public/foodMain1.svg'
-import Banana from '/public/banana.svg'
+import { useState } from 'react'
+
 import Apple from '/public/apple.svg'
+import Banana from '/public/banana.svg'
+import FourPlatesImg from '/public/foodMain1.svg'
+import SoupImg from '/public/foodMain2.svg'
+import { useWindowSize } from 'react-use'
+
+import CardContainer from '@/components/CardContainer'
+import Button from '@/components/ui/Button'
+import Select from '@/components/ui/Select/index'
+import { useSearch } from '@/hooks/useSearch'
 
 import s from './page.module.scss'
-import Select from '@/components/ui/Select/index'
-import Button from '@/components/ui/Button'
-import { useState } from 'react'
-import { useSearch } from '@/hooks/useSearch'
 
 const Home = () => {
   const { width } = useWindowSize()
   const [isDropdownNeeded, setIsDropdownNeeded] = useState(true)
   //   const [isDropdownNeeded, setIsDropdownNeeded] = useState(false)
+
   const { query, selectedOption, setQuery, setSelectedOption, handleSearch } = useSearch()
 
   const dropdownOptions = ['London', 'Paris', 'Berlin', 'Budapest', 'Rome']
@@ -56,6 +60,7 @@ const Home = () => {
         <SoupImg />
         <FourPlatesImg />
       </div>
+      <CardContainer />
     </section>
   )
 
@@ -86,6 +91,7 @@ const Home = () => {
           <Button>Get Started</Button>
         </div>
       </div>
+      <CardContainer />
     </section>
   )
 

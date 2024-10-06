@@ -1,10 +1,12 @@
 'use client'
+import { useState } from 'react'
+
+import { Croissant, ShoppingBasket } from 'lucide-react'
+
 import Button from '@/components/ui/Button/index'
 import SimpleSearchBar from '@/components/ui/SearchBar/SimpleSearchBar'
+
 import s from './styles.module.scss'
-import { Croissant } from 'lucide-react'
-import { ShoppingBasket } from 'lucide-react'
-import { useState } from 'react'
 
 const Header = () => {
   const [query, setQuery] = useState('')
@@ -18,7 +20,7 @@ const Header = () => {
         <nav className={s.navHeader}>
           <SimpleSearchBar
             onSearch={(query) => console.log(query)}
-            placeholder={'Restaurants or dishes'}
+            placeholder={'Write dishes or restaurant'}
             variantInput='searchInputHeader'
             variantForm='searchFormHeader'
           />

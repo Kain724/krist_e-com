@@ -1,42 +1,75 @@
 import clsx from 'clsx'
+import { PackageCheck, Receipt, Star } from 'lucide-react'
+import Image from 'next/image'
+
 import s from './styles.module.scss'
-import { title } from 'process'
 
 interface ICardDishProps {
-  dish: IDish
+  dishList: { [key: string]: IDish }
+  variant?: 'default' | 'search'
 }
 
-interface IDish {
+export interface IDish {
   name: string
   type: string
   rating: number
   deliveryTime: number
   price: number
+  restaurantId: number
+  restaurantName: string
+  id: number
+  image: string
 }
 
-const dish: IDish = {
-  name: 'Ресторан "Уютный уголок"',
-  type: 'Москва',
-  rating: 4,
-  deliveryTime: 30,
-  price: 200,
-}
-
-const CardDish = ({ dish }: ICardDishProps) => {
+const CardDish = ({ dishList, variant = 'default' }: ICardDishProps) => {
   return (
-    <div className={s.container}>
-      <div className={s.item}>
-        <div className={s.image}></div>
-        <div className={s.info_wrap}>
-          <h3>{dish.name}</h3>
-          <div className={s.info}>
-            <div>{dish.type}</div>
-            <div>{dish.rating}</div>
-            <div>{dish.deliveryTime}</div>
-            <div>{dish.price}</div>
-          </div>
-        </div>
-      </div>
+    <div className={s.container_card}>
+      <header>
+        <h3>Best Food</h3>
+      </header>
+      <ul className={s.container_item}>
+        {Object.values(dishList).map((dish) => (
+          <li
+            className={s.item}
+            key={dish.id}
+          >
+            <div className={s.image}>
+              <Image
+                src={dish.image}
+                alt={dish.name}
+                width={200}
+                height={200}
+              />
+            </div>{' '}
+            <div
+              className={clsx(s.info_wrap, {
+                [s.itemDefault]: variant === 'default',
+                [s.itemSearch]: variant === 'search',
+              })}
+            >
+              <div>Restaurant - {dish.restaurantName}</div>
+              <div className={s.info}>
+                <h3>{dish.name}</h3>
+                <div>
+                  <Star />
+                  {dish.rating}
+                </div>
+              </div>
+              <div className={s.info_sub}>
+                <div>
+                  {' '}
+                  <PackageCheck />
+                  {dish.deliveryTime}
+                </div>
+                <div>
+                  <Receipt />
+                  {dish.price}
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

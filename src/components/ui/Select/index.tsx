@@ -1,8 +1,11 @@
-import Select from 'react-select'
-import React, { useState } from 'react'
-import s from './styles.module.scss'
 import './react-select.scss'
 import 'react-select'
+
+import React, { useState } from 'react'
+
+import Select from 'react-select'
+
+import s from './styles.module.scss'
 
 interface IOptionSelectProps {
   placeholder?: string
@@ -29,7 +32,7 @@ const OptionSelect = ({ placeholder = '', options, onClick, onSelect }: IOptionS
         className='control'
         onChange={(option) => handleSelect(option)}
         options={options.map((option) => ({ value: option, label: option }))}
-        placeholder={'Write or select a country'}
+        placeholder={'Choose a restaurant city'}
       />
     </div>
   )

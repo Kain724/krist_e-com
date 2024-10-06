@@ -1,10 +1,4 @@
-.container {
-}
-.item {
-}
-.image {
-}
-.info_wrap {
-}
-.info {
+.content {
+  @apply grid h-full w-full grid-cols-1;
+  @apply sm:grid-cols-2;
 }

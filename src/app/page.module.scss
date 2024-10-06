@@ -2,15 +2,13 @@
   @apply container mx-auto mt-14;
 
   .main {
-    @apply flex;
+    @apply mb-10 flex flex-col;
 
     .info {
-      @apply mb-44 flex h-fit flex-col pr-2;
+      @apply mb-52 flex h-fit flex-col pr-2;
       @apply sm:w-[60%];
       @apply lg:w-[45%];
       @apply 2xl:w-[50%];
-
-      //   height: 650px;
 
       h2 {
         @apply mb-5 h-fit w-fit flex-nowrap justify-center text-3xl leading-10;

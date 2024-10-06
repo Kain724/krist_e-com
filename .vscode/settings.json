@@ -1,4 +1,7 @@
 {
   "cSpell.words": ["Krist"],
-  "errorLens.enabledDiagnosticLevels": ["error"]
+  "errorLens.enabledDiagnosticLevels": ["error"],
+  "scss.lint.unknownAtRules": "ignore",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
